@@ -69,7 +69,9 @@ public class PlayerDao implements IDao<Player, Integer>{
                 player.setPosition(data.getString("position"));
                 player.setAge(data.getInt("age"));
             }
-            return null;
+            else {
+                return null;
+            }
         } catch (SQLException ex) {
             Logger.getLogger(PlayerDao.class.getName()).log(Level.SEVERE, null, ex);
         }
