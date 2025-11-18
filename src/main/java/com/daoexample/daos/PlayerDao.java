@@ -65,6 +65,7 @@ public class PlayerDao implements IDao<Player, Integer>{
             ResultSet data = preQuery.executeQuery();
 
             if (data.next()) {
+                player.setId(data.getInt("id"));
                 player.setName(data.getString("name"));
                 player.setPosition(data.getString("position"));
                 player.setAge(data.getInt("age"));
