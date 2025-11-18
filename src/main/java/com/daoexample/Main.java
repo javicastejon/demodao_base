@@ -7,9 +7,13 @@ import java.util.Scanner;
 import com.daoexample.factory.DaoFactory;
 import com.daoexample.iface.IDao;
 import com.daoexample.models.Player;
+import com.daoexample.util.GlobalLogger;
 
 public class Main {
     public static void main(String[] args) {
+        // Configuracion de logs
+        GlobalLogger.setup();
+
         // Objeto de prueba para persistir
         Player player = new Player();
         IDao<Player, Integer> dao = DaoFactory.getDao(DaoFactory.DaoType.PLAYER);
